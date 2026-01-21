@@ -1,18 +1,21 @@
 <!-- ============================================
-     MÓDULO: RUTA PEDAGÓGICA (MALLA POR GRADOS)
-     Flujo: Selección Ciclo -> Selección Grado -> Ver Malla
+     MÓDULO: RUTA PEDAGÓGICA (MALLA CURRICULAR COMPLETA)
+     Contenido: Ciclos 0 a 5 verificados contra PDF
+     Lógica: Ciclo -> Grado -> Visualización
 ============================================= -->
 
 <section class="ruta-header text-center">
     <div class="content-container">
         <h2>Malla Curricular Progresiva</h2>
-        <p class="subtitle">Navegue por el ecosistema de aprendizaje ECO. Seleccione un ciclo para ver los grados disponibles.</p>
+        <p class="subtitle">Un ecosistema de aprendizaje estructurado. Seleccione el Ciclo y luego el Grado para visualizar los estándares y habilidades específicas.</p>
     </div>
 </section>
 
 <section class="malla-container">
     
-    <!-- PASO 1: SELECCIÓN DE CICLOS (Nombre de Ciclos) -->
+    <!-- =======================================================
+         PASO 1: NAVEGACIÓN DE CICLOS (PESTAÑAS)
+    ======================================================== -->
     <div class="malla-tabs">
         <button class="malla-tab" data-ciclo="sel-c0" style="border-bottom-color: #F39325;">
             <span class="cycle-num">CICLO 0</span>
@@ -40,47 +43,51 @@
         </button>
     </div>
 
-    <!-- PASO 2: SELECTORES DE GRADOS (Aparecen al elegir ciclo) -->
+    <!-- =======================================================
+         PASO 2: SELECTORES DE GRADOS (SUB-MENÚ)
+    ======================================================== -->
     
-    <!-- Ciclo 0 -->
+    <!-- Selector Ciclo 0 -->
     <div id="sel-c0" class="grades-selector ciclo-grades-container" style="display:none;">
-        <button class="grade-btn" data-mesh="mesh-c0" data-label="Prejardín">Grado Prejardín</button>
-        <button class="grade-btn" data-mesh="mesh-c0" data-label="Transición">Grado Transición</button>
+        <button class="grade-btn" data-mesh="mesh-c0" data-label="Prejardín">Prejardín</button>
+        <button class="grade-btn" data-mesh="mesh-c0" data-label="Transición">Transición</button>
     </div>
 
-    <!-- Ciclo 1 -->
+    <!-- Selector Ciclo 1 -->
     <div id="sel-c1" class="grades-selector ciclo-grades-container" style="display:none;">
-        <button class="grade-btn" data-mesh="mesh-c1" data-label="Primero">Grado 1°</button>
-        <button class="grade-btn" data-mesh="mesh-c1" data-label="Segundo">Grado 2°</button>
-        <button class="grade-btn" data-mesh="mesh-c1" data-label="Tercero">Grado 3°</button>
+        <button class="grade-btn" data-mesh="mesh-c1" data-label="Primero (1°)">Grado 1°</button>
+        <button class="grade-btn" data-mesh="mesh-c1" data-label="Segundo (2°)">Grado 2°</button>
+        <button class="grade-btn" data-mesh="mesh-c1" data-label="Tercero (3°)">Grado 3°</button>
     </div>
 
-    <!-- Ciclo 2 -->
+    <!-- Selector Ciclo 2 -->
     <div id="sel-c2" class="grades-selector ciclo-grades-container" style="display:none;">
-        <button class="grade-btn" data-mesh="mesh-c2" data-label="Cuarto">Grado 4°</button>
-        <button class="grade-btn" data-mesh="mesh-c2" data-label="Quinto">Grado 5°</button>
+        <button class="grade-btn" data-mesh="mesh-c2" data-label="Cuarto (4°)">Grado 4°</button>
+        <button class="grade-btn" data-mesh="mesh-c2" data-label="Quinto (5°)">Grado 5°</button>
     </div>
 
-    <!-- Ciclo 3 -->
+    <!-- Selector Ciclo 3 -->
     <div id="sel-c3" class="grades-selector ciclo-grades-container" style="display:none;">
-        <button class="grade-btn" data-mesh="mesh-c3" data-label="Sexto">Grado 6°</button>
-        <button class="grade-btn" data-mesh="mesh-c3" data-label="Séptimo">Grado 7°</button>
+        <button class="grade-btn" data-mesh="mesh-c3" data-label="Sexto (6°)">Grado 6°</button>
+        <button class="grade-btn" data-mesh="mesh-c3" data-label="Séptimo (7°)">Grado 7°</button>
     </div>
 
-    <!-- Ciclo 4 -->
+    <!-- Selector Ciclo 4 -->
     <div id="sel-c4" class="grades-selector ciclo-grades-container" style="display:none;">
-        <button class="grade-btn" data-mesh="mesh-c4" data-label="Octavo">Grado 8°</button>
-        <button class="grade-btn" data-mesh="mesh-c4" data-label="Noveno">Grado 9°</button>
+        <button class="grade-btn" data-mesh="mesh-c4" data-label="Octavo (8°)">Grado 8°</button>
+        <button class="grade-btn" data-mesh="mesh-c4" data-label="Noveno (9°)">Grado 9°</button>
     </div>
 
-    <!-- Ciclo 5 -->
+    <!-- Selector Ciclo 5 -->
     <div id="sel-c5" class="grades-selector ciclo-grades-container" style="display:none;">
-        <button class="grade-btn" data-mesh="mesh-c5" data-label="Décimo">Grado 10°</button>
-        <button class="grade-btn" data-mesh="mesh-c5" data-label="Once">Grado 11°</button>
+        <button class="grade-btn" data-mesh="mesh-c5" data-label="Décimo (10°)">Grado 10°</button>
+        <button class="grade-btn" data-mesh="mesh-c5" data-label="Once (11°)">Grado 11°</button>
     </div>
 
 
-    <!-- PASO 3: MALLAS ESPECÍFICAS (Se activan al elegir grado) -->
+    <!-- =======================================================
+         PASO 3: CONTENIDO DE LAS MALLAS (TARJETAS)
+    ======================================================== -->
 
     <!-- MALLA CICLO 0 (Prejardín / Transición) -->
     <div id="mesh-c0" class="malla-content-area">
@@ -94,7 +101,7 @@
                 <h4>Reconozco lo que siento</h4>
                 <p class="standard"><strong>Estándar:</strong> Identifico emociones básicas en momentos escolares cotidianos.</p>
                 <ul class="skills-list">
-                    <li>Identificación Emocional (Cuerpo).</li>
+                    <li>Identificación Emocional (Percepción).</li>
                     <li>Expresión Emocional Básica.</li>
                     <li>Vínculo y Confianza.</li>
                 </ul>
@@ -103,21 +110,86 @@
                 <div class="period-badge">P2: Regulación</div>
                 <h4>Me calmo y aprendo</h4>
                 <p class="standard"><strong>Estándar:</strong> Me autorregulo en momentos de frustración escolar.</p>
+                <ul class="skills-list">
+                    <li>Conciencia de la Necesidad.</li>
+                    <li>Aplicación de Estrategias.</li>
+                    <li>Búsqueda de Apoyo.</li>
+                </ul>
             </div>
             <div class="period-card">
-                <div class="period-badge">P3: Habilidades</div>
+                <div class="period-badge">P3: Habilidades Sociales</div>
                 <h4>Me relaciono con los demás</h4>
                 <p class="standard"><strong>Estándar:</strong> Expreso emociones con respeto a compañeros y docentes.</p>
+                <ul class="skills-list">
+                    <li>Colaboración y Reciprocidad.</li>
+                    <li>Regulación Social (Turnos).</li>
+                    <li>Comunicación Respetuosa.</li>
+                </ul>
             </div>
             <div class="period-card">
                 <div class="period-badge">P4: Consciencia</div>
                 <h4>Resuelvo pequeños problemas</h4>
                 <p class="standard"><strong>Estándar:</strong> Identifico, comunico y gestiono mis emociones para mejorar convivencia.</p>
+                <ul class="skills-list">
+                    <li>Aproximación al Conflicto.</li>
+                    <li>Estrategias de Negociación.</li>
+                    <li>Búsqueda de Mediación.</li>
+                </ul>
             </div>
         </div>
     </div>
 
-    <!-- MALLA CICLO 2 (Cuarto / Quinto) -->
+    <!-- MALLA CICLO 1 (Grados 1, 2, 3) -->
+    <div id="mesh-c1" class="malla-content-area">
+        <div class="ciclo-header" style="background-color: #ffe0b2; border-top: 5px solid #E85D04;">
+            <h3>Planeación Curricular ECO - Grado <span class="grade-name-target">...</span></h3>
+            <p><strong>Competencia Anual:</strong> Regulación básica y expresión emocional.</p>
+        </div>
+        <div class="periods-grid">
+            <div class="period-card">
+                <div class="period-badge">P1: Conciencia</div>
+                <h4>Identifico mis emociones en la escuela</h4>
+                <p class="standard"><strong>Estándar:</strong> Desarrollo la conciencia emocional básica identificando y nombrando mis emociones.</p>
+                <ul class="skills-list">
+                    <li>Identificación Emocional Básica.</li>
+                    <li>Reconocimiento de Emociones Desafiantes.</li>
+                    <li>Expresión Emocional Positiva.</li>
+                </ul>
+            </div>
+            <div class="period-card">
+                <div class="period-badge">P2: Autonomía</div>
+                <h4>Me autorregulo en clases</h4>
+                <p class="standard"><strong>Estándar:</strong> Aplico estrategias simples de autorregulación ante emociones desafiantes.</p>
+                <ul class="skills-list">
+                    <li>Manejo de Impulsos.</li>
+                    <li>Persistencia y Esfuerzo.</li>
+                    <li>Búsqueda de Apoyo.</li>
+                </ul>
+            </div>
+            <div class="period-card">
+                <div class="period-badge">P3: Regulación</div>
+                <h4>Me expreso con respeto</h4>
+                <p class="standard"><strong>Estándar:</strong> Expreso mis emociones con respeto usando palabras amables.</p>
+                <ul class="skills-list">
+                    <li>Comunicación Asertiva.</li>
+                    <li>Uso de Lenguaje Respetuoso.</li>
+                    <li>Solicitud Respetuosa de Necesidades.</li>
+                </ul>
+            </div>
+            <div class="period-card">
+                <div class="period-badge">P4: Habilidades Sociales</div>
+                <h4>Convivo con los demás en paz</h4>
+                <p class="standard"><strong>Estándar:</strong> Expreso mis emociones solicitando ayuda o turnos de manera pacífica.</p>
+                <ul class="skills-list">
+                    <li>Cooperación y Trabajo en Equipo.</li>
+                    <li>Resolución Pacífica de Conflictos.</li>
+                    <li>Respeto de Normas y Acuerdos.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- MALLA CICLO 2 (Grados 4, 5) -->
     <div id="mesh-c2" class="malla-content-area">
         <div class="ciclo-header" style="background-color: #e0f2f1; border-top: 5px solid #54BBAB;">
             <h3>Planeación Curricular ECO - Grado <span class="grade-name-target">...</span></h3>
@@ -138,23 +210,184 @@
                 <div class="period-badge">P2: Autonomía</div>
                 <h4>Me cuido y respeto mi cuerpo</h4>
                 <p class="standard"><strong>Estándar:</strong> Aplico estrategias de autorregulación ante emociones intensas.</p>
+                <ul class="skills-list">
+                    <li>Autocuidado e Higiene.</li>
+                    <li>Establecimiento de Límites.</li>
+                    <li>Respeto por la Integridad Ajena.</li>
+                </ul>
             </div>
             <div class="period-card">
                 <div class="period-badge">P3: Regulación</div>
                 <h4>Afronto errores y me levanto</h4>
                 <p class="standard"><strong>Estándar:</strong> Expreso emociones con responsabilidad, considerando impactos.</p>
+                <ul class="skills-list">
+                    <li>Perseverancia ante la Frustración.</li>
+                    <li>Búsqueda Activa de Soluciones.</li>
+                    <li>Autoeficacia y Confianza.</li>
+                </ul>
             </div>
             <div class="period-card">
-                <div class="period-badge">P4: Habilidades</div>
+                <div class="period-badge">P4: Habilidades Sociales</div>
                 <h4>Decidimos juntos y respetamos acuerdos</h4>
-                <p class="standard"><strong>Estándar:</strong> Gestiono mis emociones complejas con autonomía.</p>
+                <p class="standard"><strong>Estándar:</strong> Gestiono mis emociones complejas con autonomía y responsabilidad.</p>
+                <ul class="skills-list">
+                    <li>Participación en Decisiones Colectivas.</li>
+                    <li>Respeto y Cumplimiento de Acuerdos.</li>
+                    <li>Cooperación e Inclusión.</li>
+                </ul>
             </div>
         </div>
     </div>
 
-    <!-- NOTA: He incluido C0 y C2 como ejemplos completos. 
-         Se deben replicar los bloques div id="mesh-cX" para los demás ciclos 
-         con los textos exactos de la malla que cargaste. -->
+    <!-- MALLA CICLO 3 (Grados 6, 7) -->
+    <div id="mesh-c3" class="malla-content-area">
+        <div class="ciclo-header" style="background-color: #e1f5fe; border-top: 5px solid #11678B;">
+            <h3>Planeación Curricular ECO - Grado <span class="grade-name-target">...</span></h3>
+            <p><strong>Competencia Anual:</strong> Identidad, empatía y convivencia.</p>
+        </div>
+        <div class="periods-grid">
+            <div class="period-card">
+                <div class="period-badge">P1: Conciencia</div>
+                <h4>Descubro quien soy</h4>
+                <p class="standard"><strong>Estándar:</strong> Identifico empatía y sus señales en interacciones cotidianas.</p>
+                <ul class="skills-list">
+                    <li>Reconocimiento de Intereses.</li>
+                    <li>Identificación de Fortalezas.</li>
+                    <li>Afirmación de la Identidad Única.</li>
+                </ul>
+            </div>
+            <div class="period-card">
+                <div class="period-badge">P2: Cultura Autocuidado</div>
+                <h4>Convivo en la diversidad</h4>
+                <p class="standard"><strong>Estándar:</strong> Expreso empatía verbalmente ante emociones ajenas.</p>
+                <ul class="skills-list">
+                    <li>Valoración de la Diversidad.</li>
+                    <li>Escucha Activa y Tolerancia.</li>
+                    <li>Conducta Respetuosa e Inclusiva.</li>
+                </ul>
+            </div>
+            <div class="period-card">
+                <div class="period-badge">P3: Regulación</div>
+                <h4>Me cuido en el mundo digital</h4>
+                <p class="standard"><strong>Estándar:</strong> Regulo mi empatía para responder adecuadamente en grupo.</p>
+                <ul class="skills-list">
+                    <li>Gestión de la Privacidad Digital.</li>
+                    <li>Conducta Responsable en Redes.</li>
+                    <li>Búsqueda de Ayuda ante Riesgos.</li>
+                </ul>
+            </div>
+            <div class="period-card">
+                <div class="period-badge">P4: Habilidades Sociales</div>
+                <h4>Elijo con valentía</h4>
+                <p class="standard"><strong>Estándar:</strong> Identifico y activo mi empatía con autonomía ante presión.</p>
+                <ul class="skills-list">
+                    <li>Resistencia a la Presión de Grupo.</li>
+                    <li>Autonomía en Toma de Decisiones.</li>
+                    <li>Reflexión Ética de las Acciones.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- MALLA CICLO 4 (Grados 8, 9) -->
+    <div id="mesh-c4" class="malla-content-area">
+        <div class="ciclo-header" style="background-color: #f3e5f5; border-top: 5px solid #6A4C93;">
+            <h3>Planeación Curricular ECO - Grado <span class="grade-name-target">...</span></h3>
+            <p><strong>Competencia Anual:</strong> Proyecto personal, resiliencia y propósito de vida.</p>
+        </div>
+        <div class="periods-grid">
+            <div class="period-card">
+                <div class="period-badge">P1: Habilidades Vida</div>
+                <h4>Planteo mis metas</h4>
+                <p class="standard"><strong>Estándar:</strong> Identifico mis metas personales en contextos escolares específicos.</p>
+                <ul class="skills-list">
+                    <li>Definición de Metas.</li>
+                    <li>Planificación Estratégica.</li>
+                    <li>Compromiso y Esfuerzo.</li>
+                </ul>
+            </div>
+            <div class="period-card">
+                <div class="period-badge">P2: Autonomía</div>
+                <h4>Me levanto cuando caigo</h4>
+                <p class="standard"><strong>Estándar:</strong> Planifico acciones autónomas para alcanzar mis metas.</p>
+                <ul class="skills-list">
+                    <li>Persistencia ante el Fracaso.</li>
+                    <li>Aprendizaje y Reflexión.</li>
+                    <li>Confianza en la Superación.</li>
+                </ul>
+            </div>
+            <div class="period-card">
+                <div class="period-badge">P3: Autonomía</div>
+                <h4>Rompo el silencio</h4>
+                <p class="standard"><strong>Estándar:</strong> Resisto distracciones emocionales para cumplir mis metas.</p>
+                <ul class="skills-list">
+                    <li>Identificación de Conductas de Riesgo.</li>
+                    <li>Intervención Prosocial y Denuncia.</li>
+                    <li>Defensa del Respeto y la Integridad.</li>
+                </ul>
+            </div>
+            <div class="period-card">
+                <div class="period-badge">P4: Habilidades Vida</div>
+                <h4>Equilibrio en el mundo digital</h4>
+                <p class="standard"><strong>Estándar:</strong> Gestiono con autonomía mis proyectos personales y digitales.</p>
+                <ul class="skills-list">
+                    <li>Autorregulación del Tiempo Digital.</li>
+                    <li>Uso Responsable de la Tecnología.</li>
+                    <li>Equilibrio entre Actividades.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- MALLA CICLO 5 (Grados 10, 11) -->
+    <div id="mesh-c5" class="malla-content-area">
+        <div class="ciclo-header" style="background-color: #ffebee; border-top: 5px solid #C8102E;">
+            <h3>Planeación Curricular ECO - Grado <span class="grade-name-target">...</span></h3>
+            <p><strong>Competencia Anual:</strong> Orientación vocacional y sentido de futuro.</p>
+        </div>
+        <div class="periods-grid">
+            <div class="period-card">
+                <div class="period-badge">P1: Conciencia</div>
+                <h4>Exploro mis caminos</h4>
+                <p class="standard"><strong>Estándar:</strong> Identifico mis decisiones vocacionales en contextos reales.</p>
+                <ul class="skills-list">
+                    <li>Identificación de Intereses Vocacionales.</li>
+                    <li>Reconocimiento de Talentos y Fortalezas.</li>
+                    <li>Exploración de Rutas de Formación.</li>
+                </ul>
+            </div>
+            <div class="period-card">
+                <div class="period-badge">P2: Autonomía Avanzada</div>
+                <h4>Planifico mi futuro</h4>
+                <p class="standard"><strong>Estándar:</strong> Planifico trayectorias vocacionales autónomas con pasos definidos.</p>
+                <ul class="skills-list">
+                    <li>Establecimiento de Metas a Largo Plazo.</li>
+                    <li>Diseño de Planes de Acción.</li>
+                    <li>Disciplina y Orientación al Logro.</li>
+                </ul>
+            </div>
+            <div class="period-card">
+                <div class="period-badge">P3: Habilidades Vida</div>
+                <h4>Me preparo para los riesgos</h4>
+                <p class="standard"><strong>Estándar:</strong> Resisto presiones externas en mis decisiones vocacionales.</p>
+                <ul class="skills-list">
+                    <li>Identificación y Prevención de Riesgos.</li>
+                    <li>Asertividad ante la Presión Social.</li>
+                    <li>Búsqueda de Apoyo Estratégico.</li>
+                </ul>
+            </div>
+            <div class="period-card">
+                <div class="period-badge">P4: Habilidades Sociales</div>
+                <h4>Dejo mi huella</h4>
+                <p class="standard"><strong>Estándar:</strong> Gestiono con autonomía mi orientación vocacional y proyecto de vida.</p>
+                <ul class="skills-list">
+                    <li>Liderazgo y Participación Cívica.</li>
+                    <li>Sentido de Responsabilidad Social.</li>
+                    <li>Impacto y Modelo a Seguir.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 </section>
 
