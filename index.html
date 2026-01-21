@@ -3,29 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Proyecto ECO: Entorno, Contexto y Orientación. Una solución de Grupo Edúcate Colombia alineada a la Ley 2491 y 2503.">
+    <meta name="description" content="Proyecto ECO: Entorno, Contexto y Orientación. Estrategia de Grupo Edúcate Colombia para el bienestar académico y cumplimiento de leyes 2383, 2491 y 2503.">
     <meta name="author" content="Grupo Edúcate Colombia">
-    <title>Proyecto ECO | Grupo Edúcate Colombia</title>
+    <title>Proyecto ECO | Inteligencia Emocional 2026</title>
 
-    <!-- FUENTES: Barlow Condensed (Títulos - Identidad) y Roboto (Cuerpo - Lectura) -->
+    <!-- FUENTES: Barlow Condensed (Identidad ECO) y Roboto (Lectura) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <!-- ICONOS: FontAwesome para la gamificación e interfaz -->
+    <!-- ICONOS: FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- ESTILOS PRINCIPALES -->
+    <!-- ESTILOS: Nuestro CSS unificado -->
     <link rel="stylesheet" href="css/styles.css">
     
-    <!-- FAVICON (Pendiente de cargar tu logo real) -->
+    <!-- FAVICON -->
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
     <!-- ============================================
-       HEADER: IDENTIDAD VISUAL
-       Fondo Violeta ECO con logos corporativos
+       HEADER: IDENTIDAD VISUAL ECO (VIOLETA)
     ============================================= -->
     <header class="site-header">
         <div class="header-container">
@@ -33,6 +32,7 @@
             <div class="brand-area">
                 <!-- Logo Madre (Endorser) -->
                 <div class="logo-educate">
+                    <!-- Se asume formato PNG transparente -->
                     <img src="assets/logo-educate-white.png" alt="Grupo Edúcate Colombia" title="Respaldo Institucional">
                 </div>
                 <div class="divider-vertical"></div>
@@ -46,39 +46,45 @@
             <nav class="main-nav" aria-label="Navegación Principal">
                 <button class="mobile-menu-btn" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
                 <ul class="nav-list" id="nav-list">
-                    <!-- Los IDs se usarán en JS para cargar los módulos -->
-                    <li><a href="#" class="nav-link active" data-module="home">Inicio</a></li>
-                    <li><a href="#" class="nav-link" data-module="legal">Marco Legal</a></li>
-                    <li><a href="#" class="nav-link" data-module="ruta">Ruta Pedagógica</a></li>
-                    <li><a href="#" class="nav-link highlight-btn" data-module="demo">Demo Interactiva</a></li>
-                    <li><a href="#" class="nav-link" data-module="recursos">Recursos</a></li>
+                    <!-- Los data-module indican qué archivo HTML cargar de la carpeta /modules -->
+                    <li><a class="nav-link active" data-module="home">Inicio</a></li>
+                    <li><a class="nav-link" data-module="legal">Marco Legal</a></li>
+                    <li><a class="nav-link" data-module="ruta">Ruta Pedagógica</a></li>
+                    <li><a class="nav-link highlight-btn" data-module="demo">Demo Interactiva</a></li>
+                    <li><a class="nav-link" data-module="recursos">Recursos</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- ============================================
-       MAIN: CONTENEDOR DINÁMICO (SPA)
-       Aquí se cargarán los archivos html granulares
+       MAIN: CONTENEDOR DINÁMICO
+       Aquí se cargará el video y el contenido
+       sin recargar la página completa.
     ============================================= -->
     <main id="app-content" class="fade-in">
-        <!-- El contenido se inyectará aquí vía JavaScript -->
+        <!-- Estado inicial: Loader de espera -->
         <div class="loader-container">
             <div class="loader-eco"></div>
-            <p>Cargando ecosistema ECO...</p>
+            <p>Cargando Ecosistema ECO...</p>
         </div>
     </main>
 
     <!-- ============================================
-       FOOTER: RESPALDO INSTITUCIONAL
-       Color Azul Edúcate
+       FOOTER: RESPALDO INSTITUCIONAL (AZUL)
     ============================================= -->
     <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-info">
                 <h4>Grupo Edúcate Colombia</h4>
                 <p>Educación sin límites.</p>
-                <p class="legal-text">Cumplimiento Normativo: Ley 2383 (2024), Ley 2491 (2025), Ley 2503 (2025).</p>
+                <!-- Texto legal exacto solicitado -->
+                <p class="legal-text">
+                    Alineado con el cumplimiento normativo:<br>
+                    <strong>Ley 2383 de 2024</strong> (Promoción socioemocional)<br>
+                    <strong>Ley 2491 de 2025</strong> (Incorporación PEI)<br>
+                    <strong>Ley 2503 de 2025</strong> (Cátedra Educación Emocional)
+                </p>
             </div>
             <div class="footer-contact">
                 <a href="https://www.grupoeducatecolombia.com" target="_blank" rel="noopener">www.grupoeducatecolombia.com</a>
@@ -91,14 +97,14 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 Grupo Edúcate Colombia. Todos los derechos reservados.</p>
-            <p class="a11y-badge"><i class="fa-solid fa-universal-access"></i> Diseño Accesible</p>
+            <p><i class="fa-solid fa-universal-access"></i> Diseño Accesible (WCAG 2.1)</p>
         </div>
     </footer>
 
     <!-- LÓGICA DE CONTROL -->
-    <!-- Chart.js para las gráficas futuras -->
+    <!-- Chart.js para las gráficas del módulo Demo -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
-    <!-- Nuestro script principal -->
+    <!-- Script principal de navegación granular -->
     <script src="js/main.js"></script>
 
 </body>
