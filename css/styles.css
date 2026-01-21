@@ -441,3 +441,60 @@ ul { list-style: none; }
     .footer-content { flex-direction: column; text-align: center; }
     .social-icons { justify-content: center; }
 }
+/* --- CORRECCIÓN VIDEO (Hacerlo más grande y panorámico) --- */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1000px; /* Aumentado de 900px */
+    aspect-ratio: 16 / 9; /* Fuerza formato panorámico */
+    margin: 0 auto 3rem auto;
+    box-shadow: var(--shadow-hover);
+    border-radius: var(--border-radius-card);
+    overflow: hidden;
+    background: #000;
+    border: 4px solid var(--color-white);
+}
+
+.video-player {
+    width: 100%;
+    height: 100%; /* Ocupa todo el contenedor */
+    object-fit: cover; /* Asegura que no queden bordes negros */
+}
+
+/* --- NUEVOS ESTILOS PARA LA MALLA (CICLOS -> GRADOS) --- */
+.grades-selector {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    padding: 15px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    animation: fadeIn 0.3s;
+}
+
+.grade-btn {
+    padding: 8px 20px;
+    border: 2px solid var(--color-text-light);
+    background: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-text-light);
+    transition: all 0.3s;
+}
+
+.grade-btn:hover, .grade-btn.active {
+    background: var(--color-educate-blue);
+    color: white;
+    border-color: var(--color-educate-blue);
+    transform: translateY(-2px);
+}
+
+.malla-content-area {
+    display: none; /* Se oculta hasta seleccionar grado */
+}
+.malla-content-area.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
