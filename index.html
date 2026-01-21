@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyecto ECO: Entorno, Contexto y Orientación. Una solución de Grupo Edúcate Colombia alineada a la Ley 2491 y 2503.">
+    <meta name="author" content="Grupo Edúcate Colombia">
+    <title>Proyecto ECO | Grupo Edúcate Colombia</title>
+
+    <!-- FUENTES: Barlow Condensed (Títulos - Identidad) y Roboto (Cuerpo - Lectura) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- ICONOS: FontAwesome para la gamificación e interfaz -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ESTILOS PRINCIPALES -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- FAVICON (Pendiente de cargar tu logo real) -->
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- ============================================
+       HEADER: IDENTIDAD VISUAL
+       Fondo Violeta ECO con logos corporativos
+    ============================================= -->
+    <header class="site-header">
+        <div class="header-container">
+            <!-- Zona de Logos -->
+            <div class="brand-area">
+                <!-- Logo Madre (Endorser) -->
+                <div class="logo-educate">
+                    <img src="assets/logo-educate-white.png" alt="Grupo Edúcate Colombia" title="Respaldo Institucional">
+                </div>
+                <div class="divider-vertical"></div>
+                <!-- Logo Proyecto (Hero) -->
+                <div class="logo-eco">
+                    <img src="assets/logo-eco-color.png" alt="Proyecto ECO" title="Entorno, Contexto y Orientación">
+                </div>
+            </div>
+
+            <!-- Navegación Principal -->
+            <nav class="main-nav" aria-label="Navegación Principal">
+                <button class="mobile-menu-btn" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+                <ul class="nav-list" id="nav-list">
+                    <!-- Los IDs se usarán en JS para cargar los módulos -->
+                    <li><a href="#" class="nav-link active" data-module="home">Inicio</a></li>
+                    <li><a href="#" class="nav-link" data-module="legal">Marco Legal</a></li>
+                    <li><a href="#" class="nav-link" data-module="ruta">Ruta Pedagógica</a></li>
+                    <li><a href="#" class="nav-link highlight-btn" data-module="demo">Demo Interactiva</a></li>
+                    <li><a href="#" class="nav-link" data-module="recursos">Recursos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================
+       MAIN: CONTENEDOR DINÁMICO (SPA)
+       Aquí se cargarán los archivos html granulares
+    ============================================= -->
+    <main id="app-content" class="fade-in">
+        <!-- El contenido se inyectará aquí vía JavaScript -->
+        <div class="loader-container">
+            <div class="loader-eco"></div>
+            <p>Cargando ecosistema ECO...</p>
+        </div>
+    </main>
+
+    <!-- ============================================
+       FOOTER: RESPALDO INSTITUCIONAL
+       Color Azul Edúcate
+    ============================================= -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h4>Grupo Edúcate Colombia</h4>
+                <p>Educación sin límites.</p>
+                <p class="legal-text">Cumplimiento Normativo: Ley 2383 (2024), Ley 2491 (2025), Ley 2503 (2025).</p>
+            </div>
+            <div class="footer-contact">
+                <a href="https://www.grupoeducatecolombia.com" target="_blank" rel="noopener">www.grupoeducatecolombia.com</a>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Grupo Edúcate Colombia. Todos los derechos reservados.</p>
+            <p class="a11y-badge"><i class="fa-solid fa-universal-access"></i> Diseño Accesible</p>
+        </div>
+    </footer>
+
+    <!-- LÓGICA DE CONTROL -->
+    <!-- Chart.js para las gráficas futuras -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <!-- Nuestro script principal -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
