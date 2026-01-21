@@ -1,69 +1,82 @@
-<section class="legal-hero text-center">
+<section class="ruta-header text-center">
     <div class="content-container">
-        <h2>La Ruta del Cumplimiento</h2>
-        <p>El marco normativo ha evolucionado. ECO garantiza el cumplimiento estricto.</p>
+        <h2>Malla Curricular Progresiva</h2>
+        <p>Seleccione el Ciclo y luego el Grado específico para ver el plan de estudios.</p>
     </div>
 </section>
 
-<section class="timeline-container">
+<section class="malla-container">
     
-    <!-- LEY 2383 -->
-    <div class="timeline-item">
-        <div class="timeline-icon" style="background: var(--color-eco-yellow);"><i class="fa-solid fa-seedling"></i></div>
-        <div class="timeline-content">
-            <span class="date-badge">Julio 2024</span>
-            <h3>Ley 2383 - La Promoción</h3>
-            <p class="summary">Promoción transversal de la educación socioemocional.</p>
-            <!-- CAMBIO AQUÍ: data-target en lugar de onclick -->
-            <button class="toggle-btn" data-target="law1">Ver Artículos Clave <i class="fa-solid fa-chevron-down"></i></button>
-            <div id="law1" class="law-details hidden">
-                <ul class="eco-list">
-                    <li><strong>Art 1:</strong> Promoción transversal.</li>
-                    <li><strong>Art 5:</strong> Diagnóstico obligatorio previo.</li>
-                    <li><strong>Art 4:</strong> Formación a docentes y padres.</li>
-                </ul>
+    <!-- NIVEL 1: PESTAÑAS DE CICLOS -->
+    <div class="malla-tabs">
+        <button class="malla-tab" data-ciclo="sel-c0" style="border-bottom-color: #F39325;">CICLO 0</button>
+        <button class="malla-tab" data-ciclo="sel-c1" style="border-bottom-color: #E85D04;">CICLO 1</button>
+        <button class="malla-tab" data-ciclo="sel-c2" style="border-bottom-color: #54BBAB;">CICLO 2</button>
+        <!-- Agregar resto de ciclos -->
+    </div>
+
+    <!-- NIVEL 2: SELECTORES DE GRADO (Ocultos por defecto) -->
+    
+    <!-- Selector Ciclo 0 -->
+    <div id="sel-c0" class="grades-selector ciclo-grades-container" style="display:none;">
+        <button class="grade-btn" data-mesh="mesh-c0">Prejardín</button>
+        <button class="grade-btn" data-mesh="mesh-c0">Transición</button>
+    </div>
+
+    <!-- Selector Ciclo 1 -->
+    <div id="sel-c1" class="grades-selector ciclo-grades-container" style="display:none;">
+        <button class="grade-btn" data-mesh="mesh-c1">Grado 1°</button>
+        <button class="grade-btn" data-mesh="mesh-c1">Grado 2°</button>
+        <button class="grade-btn" data-mesh="mesh-c1">Grado 3°</button>
+    </div>
+
+    <!-- Selector Ciclo 2 -->
+    <div id="sel-c2" class="grades-selector ciclo-grades-container" style="display:none;">
+        <button class="grade-btn" data-mesh="mesh-c2">Grado 4°</button>
+        <button class="grade-btn" data-mesh="mesh-c2">Grado 5°</button>
+    </div>
+
+
+    <!-- NIVEL 3: CONTENIDO MALLA -->
+
+    <!-- Malla Ciclo 0 -->
+    <div id="mesh-c0" class="malla-content-area">
+        <div class="ciclo-header" style="background-color: #fff3e0;">
+            <h3>Malla: Prejardín y Transición</h3>
+            <p><strong>Competencia:</strong> Reconocimiento sensorial.</p>
+        </div>
+        <!-- Aquí van las tarjetas de periodos C0 (mismo código anterior) -->
+        <p class="text-center"><em>Visualización de Malla Ciclo 0...</em></p>
+    </div>
+
+    <!-- Malla Ciclo 2 (Ejemplo Completo) -->
+    <div id="mesh-c2" class="malla-content-area">
+        <div class="ciclo-header" style="background-color: #e0f2f1;">
+            <h3>Malla: Grados 4° y 5°</h3>
+            <p><strong>Competencia:</strong> Autonomía inicial y responsabilidad.</p>
+        </div>
+        <div class="periods-grid">
+            <div class="period-card">
+                <div class="period-badge">Periodo 1</div>
+                <h4>Tomo decisiones</h4>
+                <p>Estándar: Identifico emociones complejas.</p>
+            </div>
+            <div class="period-card">
+                <div class="period-badge">Periodo 2</div>
+                <h4>Me cuido</h4>
+                <p>Estándar: Estrategias de autorregulación.</p>
+            </div>
+             <div class="period-card">
+                <div class="period-badge">Periodo 3</div>
+                <h4>Afronto errores</h4>
+                <p>Estándar: Expreso emociones con responsabilidad.</p>
+            </div>
+             <div class="period-card">
+                <div class="period-badge">Periodo 4</div>
+                <h4>Respetamos acuerdos</h4>
+                <p>Estándar: Gestiono mis emociones.</p>
             </div>
         </div>
     </div>
 
-    <!-- LEY 2491 -->
-    <div class="timeline-item">
-        <div class="timeline-icon" style="background: var(--color-eco-teal);"><i class="fa-solid fa-book-open"></i></div>
-        <div class="timeline-content">
-            <span class="date-badge">Julio 2025</span>
-            <h3>Ley 2491 - La Incorporación</h3>
-            <p class="summary">Incorporación obligatoria en el PEI.</p>
-            <button class="toggle-btn" data-target="law2">Ver Artículos Clave <i class="fa-solid fa-chevron-down"></i></button>
-            <div id="law2" class="law-details hidden">
-                <ul class="eco-list">
-                    <li><strong>Art 1:</strong> Inclusión en el PEI garantizada.</li>
-                    <li><strong>Art 4:</strong> Categoría de educación emocional docente.</li>
-                    <li><strong>Art 7:</strong> Rutas de atención y prevención.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- LEY 2503 -->
-    <div class="timeline-item">
-        <div class="timeline-icon" style="background: var(--color-eco-violet);"><i class="fa-solid fa-graduation-cap"></i></div>
-        <div class="timeline-content">
-            <span class="date-badge">Julio 2025</span>
-            <h3>Ley 2503 - Cátedra y Evaluación</h3>
-            <p class="summary">Implementación de la Cátedra y medición ICFES.</p>
-            <button class="toggle-btn" data-target="law3">Ver Artículos Clave <i class="fa-solid fa-chevron-down"></i></button>
-            <div id="law3" class="law-details hidden">
-                <ul class="eco-list">
-                    <li><strong>Art 1:</strong> Creación de la Cátedra.</li>
-                    <li><strong>Art 2:</strong> Glosario técnico oficial.</li>
-                    <li><strong>Art 9:</strong> Evaluación nacional ICFES.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="timeline-end text-center">
-        <div class="shield-icon"><i class="fa-solid fa-shield-halved"></i></div>
-        <h3>Institución Blindada</h3>
-    </div>
 </section>
