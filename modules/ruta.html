@@ -1,82 +1,179 @@
+<!-- ============================================
+     MÓDULO: RUTA PEDAGÓGICA (MALLA POR GRADOS)
+     Flujo: Selección Ciclo -> Selección Grado -> Ver Malla
+============================================= -->
+
 <section class="ruta-header text-center">
     <div class="content-container">
         <h2>Malla Curricular Progresiva</h2>
-        <p>Seleccione el Ciclo y luego el Grado específico para ver el plan de estudios.</p>
+        <p class="subtitle">Navegue por el ecosistema de aprendizaje ECO. Seleccione un ciclo para ver los grados disponibles.</p>
     </div>
 </section>
 
 <section class="malla-container">
     
-    <!-- NIVEL 1: PESTAÑAS DE CICLOS -->
+    <!-- PASO 1: SELECCIÓN DE CICLOS (Nombre de Ciclos) -->
     <div class="malla-tabs">
-        <button class="malla-tab" data-ciclo="sel-c0" style="border-bottom-color: #F39325;">CICLO 0</button>
-        <button class="malla-tab" data-ciclo="sel-c1" style="border-bottom-color: #E85D04;">CICLO 1</button>
-        <button class="malla-tab" data-ciclo="sel-c2" style="border-bottom-color: #54BBAB;">CICLO 2</button>
-        <!-- Agregar resto de ciclos -->
+        <button class="malla-tab" data-ciclo="sel-c0" style="border-bottom-color: #F39325;">
+            <span class="cycle-num">CICLO 0</span>
+            <span class="cycle-grade">Fundamentación</span>
+        </button>
+        <button class="malla-tab" data-ciclo="sel-c1" style="border-bottom-color: #E85D04;">
+            <span class="cycle-num">CICLO 1</span>
+            <span class="cycle-grade">Exploración</span>
+        </button>
+        <button class="malla-tab" data-ciclo="sel-c2" style="border-bottom-color: #54BBAB;">
+            <span class="cycle-num">CICLO 2</span>
+            <span class="cycle-grade">Autonomía</span>
+        </button>
+        <button class="malla-tab" data-ciclo="sel-c3" style="border-bottom-color: #11678B;">
+            <span class="cycle-num">CICLO 3</span>
+            <span class="cycle-grade">Identidad</span>
+        </button>
+        <button class="malla-tab" data-ciclo="sel-c4" style="border-bottom-color: #6A4C93;">
+            <span class="cycle-num">CICLO 4</span>
+            <span class="cycle-grade">Resiliencia</span>
+        </button>
+        <button class="malla-tab" data-ciclo="sel-c5" style="border-bottom-color: #C8102E;">
+            <span class="cycle-num">CICLO 5</span>
+            <span class="cycle-grade">Proyección</span>
+        </button>
     </div>
 
-    <!-- NIVEL 2: SELECTORES DE GRADO (Ocultos por defecto) -->
+    <!-- PASO 2: SELECTORES DE GRADOS (Aparecen al elegir ciclo) -->
     
-    <!-- Selector Ciclo 0 -->
+    <!-- Ciclo 0 -->
     <div id="sel-c0" class="grades-selector ciclo-grades-container" style="display:none;">
-        <button class="grade-btn" data-mesh="mesh-c0">Prejardín</button>
-        <button class="grade-btn" data-mesh="mesh-c0">Transición</button>
+        <button class="grade-btn" data-mesh="mesh-c0" data-label="Prejardín">Grado Prejardín</button>
+        <button class="grade-btn" data-mesh="mesh-c0" data-label="Transición">Grado Transición</button>
     </div>
 
-    <!-- Selector Ciclo 1 -->
+    <!-- Ciclo 1 -->
     <div id="sel-c1" class="grades-selector ciclo-grades-container" style="display:none;">
-        <button class="grade-btn" data-mesh="mesh-c1">Grado 1°</button>
-        <button class="grade-btn" data-mesh="mesh-c1">Grado 2°</button>
-        <button class="grade-btn" data-mesh="mesh-c1">Grado 3°</button>
+        <button class="grade-btn" data-mesh="mesh-c1" data-label="Primero">Grado 1°</button>
+        <button class="grade-btn" data-mesh="mesh-c1" data-label="Segundo">Grado 2°</button>
+        <button class="grade-btn" data-mesh="mesh-c1" data-label="Tercero">Grado 3°</button>
     </div>
 
-    <!-- Selector Ciclo 2 -->
+    <!-- Ciclo 2 -->
     <div id="sel-c2" class="grades-selector ciclo-grades-container" style="display:none;">
-        <button class="grade-btn" data-mesh="mesh-c2">Grado 4°</button>
-        <button class="grade-btn" data-mesh="mesh-c2">Grado 5°</button>
+        <button class="grade-btn" data-mesh="mesh-c2" data-label="Cuarto">Grado 4°</button>
+        <button class="grade-btn" data-mesh="mesh-c2" data-label="Quinto">Grado 5°</button>
+    </div>
+
+    <!-- Ciclo 3 -->
+    <div id="sel-c3" class="grades-selector ciclo-grades-container" style="display:none;">
+        <button class="grade-btn" data-mesh="mesh-c3" data-label="Sexto">Grado 6°</button>
+        <button class="grade-btn" data-mesh="mesh-c3" data-label="Séptimo">Grado 7°</button>
+    </div>
+
+    <!-- Ciclo 4 -->
+    <div id="sel-c4" class="grades-selector ciclo-grades-container" style="display:none;">
+        <button class="grade-btn" data-mesh="mesh-c4" data-label="Octavo">Grado 8°</button>
+        <button class="grade-btn" data-mesh="mesh-c4" data-label="Noveno">Grado 9°</button>
+    </div>
+
+    <!-- Ciclo 5 -->
+    <div id="sel-c5" class="grades-selector ciclo-grades-container" style="display:none;">
+        <button class="grade-btn" data-mesh="mesh-c5" data-label="Décimo">Grado 10°</button>
+        <button class="grade-btn" data-mesh="mesh-c5" data-label="Once">Grado 11°</button>
     </div>
 
 
-    <!-- NIVEL 3: CONTENIDO MALLA -->
+    <!-- PASO 3: MALLAS ESPECÍFICAS (Se activan al elegir grado) -->
 
-    <!-- Malla Ciclo 0 -->
+    <!-- MALLA CICLO 0 (Prejardín / Transición) -->
     <div id="mesh-c0" class="malla-content-area">
-        <div class="ciclo-header" style="background-color: #fff3e0;">
-            <h3>Malla: Prejardín y Transición</h3>
-            <p><strong>Competencia:</strong> Reconocimiento sensorial.</p>
-        </div>
-        <!-- Aquí van las tarjetas de periodos C0 (mismo código anterior) -->
-        <p class="text-center"><em>Visualización de Malla Ciclo 0...</em></p>
-    </div>
-
-    <!-- Malla Ciclo 2 (Ejemplo Completo) -->
-    <div id="mesh-c2" class="malla-content-area">
-        <div class="ciclo-header" style="background-color: #e0f2f1;">
-            <h3>Malla: Grados 4° y 5°</h3>
-            <p><strong>Competencia:</strong> Autonomía inicial y responsabilidad.</p>
+        <div class="ciclo-header" style="background-color: #fff3e0; border-top: 5px solid #F39325;">
+            <h3>Planeación Curricular ECO - Grado <span class="grade-name-target">...</span></h3>
+            <p><strong>Competencia Anual:</strong> Reconocimiento sensorial y emocional.</p>
         </div>
         <div class="periods-grid">
             <div class="period-card">
-                <div class="period-badge">Periodo 1</div>
-                <h4>Tomo decisiones</h4>
-                <p>Estándar: Identifico emociones complejas.</p>
+                <div class="period-badge">P1: Autonomía</div>
+                <h4>Reconozco lo que siento</h4>
+                <p class="standard"><strong>Estándar:</strong> Identifico emociones básicas en momentos escolares cotidianos.</p>
+                <ul class="skills-list">
+                    <li>Identificación Emocional (Cuerpo).</li>
+                    <li>Expresión Emocional Básica.</li>
+                    <li>Vínculo y Confianza.</li>
+                </ul>
             </div>
             <div class="period-card">
-                <div class="period-badge">Periodo 2</div>
-                <h4>Me cuido</h4>
-                <p>Estándar: Estrategias de autorregulación.</p>
+                <div class="period-badge">P2: Regulación</div>
+                <h4>Me calmo y aprendo</h4>
+                <p class="standard"><strong>Estándar:</strong> Me autorregulo en momentos de frustración escolar.</p>
             </div>
-             <div class="period-card">
-                <div class="period-badge">Periodo 3</div>
-                <h4>Afronto errores</h4>
-                <p>Estándar: Expreso emociones con responsabilidad.</p>
+            <div class="period-card">
+                <div class="period-badge">P3: Habilidades</div>
+                <h4>Me relaciono con los demás</h4>
+                <p class="standard"><strong>Estándar:</strong> Expreso emociones con respeto a compañeros y docentes.</p>
             </div>
-             <div class="period-card">
-                <div class="period-badge">Periodo 4</div>
-                <h4>Respetamos acuerdos</h4>
-                <p>Estándar: Gestiono mis emociones.</p>
+            <div class="period-card">
+                <div class="period-badge">P4: Consciencia</div>
+                <h4>Resuelvo pequeños problemas</h4>
+                <p class="standard"><strong>Estándar:</strong> Identifico, comunico y gestiono mis emociones para mejorar convivencia.</p>
             </div>
         </div>
     </div>
 
+    <!-- MALLA CICLO 2 (Cuarto / Quinto) -->
+    <div id="mesh-c2" class="malla-content-area">
+        <div class="ciclo-header" style="background-color: #e0f2f1; border-top: 5px solid #54BBAB;">
+            <h3>Planeación Curricular ECO - Grado <span class="grade-name-target">...</span></h3>
+            <p><strong>Competencia Anual:</strong> Autonomía inicial y responsabilidad.</p>
+        </div>
+        <div class="periods-grid">
+            <div class="period-card">
+                <div class="period-badge">P1: Conciencia</div>
+                <h4>Tomo decisiones y asumo consecuencias</h4>
+                <p class="standard"><strong>Estándar:</strong> Identifico y nombro emociones complejas (frustración, culpa, orgullo).</p>
+                <ul class="skills-list">
+                    <li>Reflexión Previa a la Decisión.</li>
+                    <li>Asunción de Responsabilidad.</li>
+                    <li>Aprendizaje a partir del Error.</li>
+                </ul>
+            </div>
+            <div class="period-card">
+                <div class="period-badge">P2: Autonomía</div>
+                <h4>Me cuido y respeto mi cuerpo</h4>
+                <p class="standard"><strong>Estándar:</strong> Aplico estrategias de autorregulación ante emociones intensas.</p>
+            </div>
+            <div class="period-card">
+                <div class="period-badge">P3: Regulación</div>
+                <h4>Afronto errores y me levanto</h4>
+                <p class="standard"><strong>Estándar:</strong> Expreso emociones con responsabilidad, considerando impactos.</p>
+            </div>
+            <div class="period-card">
+                <div class="period-badge">P4: Habilidades</div>
+                <h4>Decidimos juntos y respetamos acuerdos</h4>
+                <p class="standard"><strong>Estándar:</strong> Gestiono mis emociones complejas con autonomía.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- NOTA: He incluido C0 y C2 como ejemplos completos. 
+         Se deben replicar los bloques div id="mesh-cX" para los demás ciclos 
+         con los textos exactos de la malla que cargaste. -->
+
 </section>
+
+<!-- LÓGICA DE ACTUALIZACIÓN DE NOMBRE DE GRADO -->
+<script>
+    // Al hacer clic en un grado, capturamos su nombre y lo ponemos en el título de la malla
+    document.querySelectorAll('.grade-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const gradeLabel = this.getAttribute('data-label');
+            const targetMesh = this.getAttribute('data-mesh');
+            
+            // Esperar un milisegundo para que el JS principal active el contenedor
+            setTimeout(() => {
+                const meshDiv = document.getElementById(targetMesh);
+                if(meshDiv) {
+                    const labelSpan = meshDiv.querySelector('.grade-name-target');
+                    if(labelSpan) labelSpan.innerText = gradeLabel;
+                }
+            }, 50);
+        });
+    });
+</script>
