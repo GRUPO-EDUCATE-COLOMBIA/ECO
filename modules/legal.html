@@ -1,221 +1,69 @@
-<!-- ============================================
-     MÓDULO: MARCO LEGAL (GAMIFICADO)
-     Contenido: Leyes 2383, 2491 y 2503
-============================================= -->
-
 <section class="legal-hero text-center">
     <div class="content-container">
         <h2>La Ruta del Cumplimiento</h2>
-        <p>El marco normativo ha evolucionado. ECO no solo se adapta, sino que garantiza el cumplimiento estricto de la nueva legislación colombiana.</p>
+        <p>El marco normativo ha evolucionado. ECO garantiza el cumplimiento estricto.</p>
     </div>
 </section>
 
-<!-- LÍNEA DE TIEMPO INTERACTIVA -->
 <section class="timeline-container">
     
-    <!-- HITO 1: LEY 2383 -->
+    <!-- LEY 2383 -->
     <div class="timeline-item">
-        <div class="timeline-icon" style="background: var(--color-eco-yellow);">
-            <i class="fa-solid fa-seedling"></i>
-        </div>
+        <div class="timeline-icon" style="background: var(--color-eco-yellow);"><i class="fa-solid fa-seedling"></i></div>
         <div class="timeline-content">
             <span class="date-badge">Julio 2024</span>
             <h3>Ley 2383 - La Promoción</h3>
-            <p class="summary">Por medio de la cual se promueve la educación socioemocional en niños, niñas y adolescentes.</p>
-            
-            <button class="toggle-btn" onclick="toggleDetails('law1')">Ver Artículos Clave <i class="fa-solid fa-chevron-down"></i></button>
-            
+            <p class="summary">Promoción transversal de la educación socioemocional.</p>
+            <!-- CAMBIO AQUÍ: data-target en lugar de onclick -->
+            <button class="toggle-btn" data-target="law1">Ver Artículos Clave <i class="fa-solid fa-chevron-down"></i></button>
             <div id="law1" class="law-details hidden">
                 <ul class="eco-list">
-                    <li><strong>Artículo 1 (Objeto):</strong> Promover de manera transversal la educación socioemocional en un marco de desarrollo integral.</li>
-                    <li><strong>Artículo 5 (Diagnóstico):</strong> "Previo a la implementación... las instituciones realizarán un diagnóstico del nivel educativo socioemocional". <em>(ECO cumple esto con su Batería Diagnóstica).</em></li>
-                    <li><strong>Artículo 4 (Líneas de Intervención):</strong> Exige formación a docentes y escuela de padres.</li>
+                    <li><strong>Art 1:</strong> Promoción transversal.</li>
+                    <li><strong>Art 5:</strong> Diagnóstico obligatorio previo.</li>
+                    <li><strong>Art 4:</strong> Formación a docentes y padres.</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <!-- HITO 2: LEY 2491 -->
+    <!-- LEY 2491 -->
     <div class="timeline-item">
-        <div class="timeline-icon" style="background: var(--color-eco-teal);">
-            <i class="fa-solid fa-book-open"></i>
-        </div>
+        <div class="timeline-icon" style="background: var(--color-eco-teal);"><i class="fa-solid fa-book-open"></i></div>
         <div class="timeline-content">
             <span class="date-badge">Julio 2025</span>
             <h3>Ley 2491 - La Incorporación</h3>
-            <p class="summary">Incorporación obligatoria del componente socioemocional en el PEI (Proyecto Educativo Institucional).</p>
-            
-            <button class="toggle-btn" onclick="toggleDetails('law2')">Ver Artículos Clave <i class="fa-solid fa-chevron-down"></i></button>
-            
+            <p class="summary">Incorporación obligatoria en el PEI.</p>
+            <button class="toggle-btn" data-target="law2">Ver Artículos Clave <i class="fa-solid fa-chevron-down"></i></button>
             <div id="law2" class="law-details hidden">
                 <ul class="eco-list">
-                    <li><strong>Artículo 1:</strong> El Ministerio garantizará la incorporación del componente socioemocional a los Proyectos Educativos Institucionales (PEI).</li>
-                    <li><strong>Artículo 4 (Docentes):</strong> Las instituciones incorporarán la categoría de "educación emocional" en sus estrategias de formación docente.</li>
-                    <li><strong>Artículo 7 (Prevención):</strong> Integración de rutas de atención y protección (Salud Mental y Prevención de Riesgos).</li>
+                    <li><strong>Art 1:</strong> Inclusión en el PEI garantizada.</li>
+                    <li><strong>Art 4:</strong> Categoría de educación emocional docente.</li>
+                    <li><strong>Art 7:</strong> Rutas de atención y prevención.</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <!-- HITO 3: LEY 2503 -->
+    <!-- LEY 2503 -->
     <div class="timeline-item">
-        <div class="timeline-icon" style="background: var(--color-eco-violet);">
-            <i class="fa-solid fa-graduation-cap"></i>
-        </div>
+        <div class="timeline-icon" style="background: var(--color-eco-violet);"><i class="fa-solid fa-graduation-cap"></i></div>
         <div class="timeline-content">
             <span class="date-badge">Julio 2025</span>
-            <h3>Ley 2503 - La Cátedra y Evaluación</h3>
-            <p class="summary">Creación e implementación de la Cátedra de Educación Emocional y estándares de medición.</p>
-            
-            <button class="toggle-btn" onclick="toggleDetails('law3')">Ver Artículos Clave <i class="fa-solid fa-chevron-down"></i></button>
-            
+            <h3>Ley 2503 - Cátedra y Evaluación</h3>
+            <p class="summary">Implementación de la Cátedra y medición ICFES.</p>
+            <button class="toggle-btn" data-target="law3">Ver Artículos Clave <i class="fa-solid fa-chevron-down"></i></button>
             <div id="law3" class="law-details hidden">
                 <ul class="eco-list">
-                    <li><strong>Artículo 1 (Cátedra):</strong> Crear e implementar la Cátedra de Educación Emocional en preescolar, básica y media.</li>
-                    <li><strong>Artículo 2 (Definiciones):</strong> Establece el lenguaje técnico oficial (Inteligencia Emocional, Competencias Emocionales) que ECO utiliza.</li>
-                    <li><strong>Artículo 9 (Evaluación ICFES):</strong> "El Ministerio implementará la evaluación de competencias emocionales a través del ICFES". <em>(ECO prepara a sus estudiantes para este requisito).</em></li>
+                    <li><strong>Art 1:</strong> Creación de la Cátedra.</li>
+                    <li><strong>Art 2:</strong> Glosario técnico oficial.</li>
+                    <li><strong>Art 9:</strong> Evaluación nacional ICFES.</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <!-- META FINAL -->
     <div class="timeline-end text-center">
-        <div class="shield-icon">
-            <i class="fa-solid fa-shield-halved"></i>
-        </div>
+        <div class="shield-icon"><i class="fa-solid fa-shield-halved"></i></div>
         <h3>Institución Blindada</h3>
-        <p>Al implementar ECO, su colegio cumple integralmente con los 3 mandatos legales vigentes.</p>
     </div>
-
 </section>
-
-<!-- ESTILOS ESPECÍFICOS DEL MÓDULO LEGAL -->
-<style>
-    .timeline-container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 40px 20px;
-        position: relative;
-    }
-
-    /* Línea vertical central */
-    .timeline-container::before {
-        content: '';
-        position: absolute;
-        left: 50px; /* Ajuste para móvil/escritorio */
-        top: 0;
-        bottom: 0;
-        width: 4px;
-        background: #e0e0e0;
-        border-radius: 2px;
-    }
-
-    .timeline-item {
-        position: relative;
-        margin-bottom: 50px;
-        padding-left: 80px;
-    }
-
-    .timeline-icon {
-        position: absolute;
-        left: 25px;
-        top: 0;
-        width: 54px;
-        height: 54px;
-        border-radius: 50%;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.5rem;
-        box-shadow: 0 0 0 5px white, var(--shadow-soft);
-        z-index: 2;
-        transform: translateX(-50%);
-    }
-
-    .timeline-content {
-        background: white;
-        padding: 2rem;
-        border-radius: var(--border-radius-card);
-        box-shadow: var(--shadow-soft);
-        border-left: 5px solid transparent; /* Se colorea dinámicamente si se desea */
-        transition: transform 0.3s;
-    }
-
-    .timeline-content:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow-hover);
-    }
-
-    .date-badge {
-        display: inline-block;
-        background: #eee;
-        padding: 4px 12px;
-        border-radius: 20px;
-        font-size: 0.85rem;
-        font-weight: bold;
-        color: var(--color-text-light);
-        margin-bottom: 10px;
-    }
-
-    .timeline-content h3 {
-        color: var(--color-educate-blue);
-        margin-bottom: 10px;
-    }
-
-    .toggle-btn {
-        background: none;
-        border: none;
-        color: var(--color-eco-teal);
-        font-weight: bold;
-        cursor: pointer;
-        margin-top: 15px;
-        font-size: 1rem;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-    }
-
-    .toggle-btn:hover {
-        text-decoration: underline;
-    }
-
-    .law-details.hidden {
-        display: none;
-    }
-
-    .law-details {
-        margin-top: 15px;
-        padding-top: 15px;
-        border-top: 1px solid #eee;
-        animation: fadeIn 0.3s;
-    }
-
-    .shield-icon {
-        font-size: 4rem;
-        color: var(--color-educate-blue);
-        margin-bottom: 1rem;
-    }
-
-    @media (min-width: 768px) {
-        .timeline-container::before { left: 50%; margin-left: -2px; }
-        .timeline-item { width: 50%; padding-left: 0; padding-right: 40px; }
-        .timeline-item:nth-child(even) { margin-left: 50%; padding-left: 40px; padding-right: 0; }
-        .timeline-icon { left: 50%; }
-        
-        .timeline-item:nth-child(odd) { text-align: right; }
-        .timeline-item:nth-child(odd) .timeline-content { text-align: right; }
-        .timeline-item:nth-child(odd) .toggle-btn { justify-content: flex-end; }
-        .timeline-item:nth-child(odd) .eco-list li { padding-right: 1.5rem; padding-left: 0; }
-        .timeline-item:nth-child(odd) .eco-list li::before { right: 0; left: auto; }
-    }
-</style>
-
-<!-- SCRIPT INTERNO PARA LOS ACORDEONES -->
-<script>
-    function toggleDetails(id) {
-        const element = document.getElementById(id);
-        element.classList.toggle('hidden');
-    }
-</script>
